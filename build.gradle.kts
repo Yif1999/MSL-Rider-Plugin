@@ -47,6 +47,8 @@ dependencies {
         // Module Dependencies. Uses `platformBundledModules` property from the gradle.properties file for bundled IntelliJ Platform modules.
         bundledModules(providers.gradleProperty("platformBundledModules").map { it.split(',') })
 
+        plugins("com.redhat.devtools.lsp4ij:${libs.versions.lsp4ij.get()}")
+
         testFramework(TestFrameworkType.Platform)
     }
 }
@@ -56,6 +58,9 @@ intellijPlatform {
     pluginConfiguration {
         name = providers.gradleProperty("pluginName")
         version = providers.gradleProperty("pluginVersion")
+        vendor {
+            name = "TECH OTAKUS"
+        }
 
         // Extract the <!-- Plugin description --> section from README.md and provide for the plugin's manifest
         description = providers.fileContents(layout.projectDirectory.file("README.md")).asText.map {

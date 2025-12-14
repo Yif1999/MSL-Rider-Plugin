@@ -1,6 +1,10 @@
 # Metal Shader Language Support
 
-![Build Status](https://github.com/techotakus/metal-shader-support/workflows/Build/badge.svg)
+<div align="center">
+
+![Icon](./src/main/resources/META-INF/pluginIcon@2x.png)
+
+</div>
 
 <!-- Plugin description -->
 Provides comprehensive Metal Shader Language (`.metal`) support for JetBrains Rider and other IntelliJ-based IDEs. This plugin integrates the Metal Language Server to provide a rich editing experience.

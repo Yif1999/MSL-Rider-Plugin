@@ -25,7 +25,15 @@ class MetalSyntaxHighlighter : SyntaxHighlighterBase() {
         private val NUMBER_KEYS = arrayOf(DefaultLanguageHighlighterColors.NUMBER)
         private val STRING_KEYS = arrayOf(DefaultLanguageHighlighterColors.STRING)
         private val COMMENT_KEYS = arrayOf(DefaultLanguageHighlighterColors.LINE_COMMENT)
-        private val IDENTIFIER_KEYS = arrayOf(DefaultLanguageHighlighterColors.IDENTIFIER)
+
+        // 自定义一个 Metal 标识符颜色 key，默认参考局部变量颜色，比纯白更醒目
+        val METAL_IDENTIFIER: TextAttributesKey =
+            TextAttributesKey.createTextAttributesKey(
+                "METAL_IDENTIFIER",
+                DefaultLanguageHighlighterColors.LOCAL_VARIABLE
+            )
+
+        private val IDENTIFIER_KEYS = arrayOf(METAL_IDENTIFIER)
         private val EMPTY_KEYS = emptyArray<TextAttributesKey>()
     }
 }

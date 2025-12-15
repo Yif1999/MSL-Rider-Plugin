@@ -8,13 +8,23 @@
     <depends>com.redhat.devtools.lsp4ij</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <fileType name="Metal" implementationClass="org.techotakus.rider.metal.MetalFileType" fieldName="INSTANCE" extensions="metal"/>
-        <lang.syntaxHighlighterFactory language="Metal" implementationClass="org.techotakus.rider.metal.MetalSyntaxHighlighterFactory"/>
-        <lang.parserDefinition language="Metal" implementationClass="org.techotakus.rider.metal.MetalParserDefinition"/>
+        <!-- language 属性使用小写 ID "metal"，与 MetalLanguage 一致 -->
+        <fileType name="Metal"
+                  implementationClass="org.techotakus.rider.metal.MetalFileType"
+                  fieldName="INSTANCE"
+                  language="metal"
+                  extensions="metal"/>
+        <lang.syntaxHighlighterFactory language="metal"
+                                       implementationClass="org.techotakus.rider.metal.MetalSyntaxHighlighterFactory"/>
+        <lang.parserDefinition language="metal"
+                               implementationClass="org.techotakus.rider.metal.MetalParserDefinition"/>
     </extensions>
-    
+
     <extensions defaultExtensionNs="com.redhat.devtools.lsp4ij">
-        <server id="metal-lsp" name="Metal LSP" factoryClass="org.techotakus.rider.metal.lsp.MetalLanguageServerFactory"/>
-        <languageMapping language="Metal" serverId="metal-lsp"/>
+        <server id="metal-lsp"
+                name="Metal LSP"
+                factoryClass="org.techotakus.rider.metal.lsp.MetalLanguageServerFactory"/>
+        <!-- LSP 语言映射同样使用 "metal" -->
+        <languageMapping language="metal" serverId="metal-lsp"/>
     </extensions>
 </idea-plugin>

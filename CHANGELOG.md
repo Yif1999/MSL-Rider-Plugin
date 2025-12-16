@@ -2,9 +2,7 @@
 
 # Metal Shader Language Support Changelog
 
-## [Unreleased]
-
-## [1.1.0] - 2025-12-16
+## [1.1.0] - 2025-12-17
 
 ### Added
 
@@ -16,7 +14,7 @@
 
 - 基于 IntelliJ Platform 2025.2.5 配置构建环境和依赖。
 
-## [1.0.0] - 2025-xx-xx
+## [1.0.0] - 2025-12-14
 
 ### Added
 

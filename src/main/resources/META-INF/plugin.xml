@@ -3,6 +3,7 @@
     <id>org.techotakus.rider.metal</id>
     <name>Metal Shader Language Support</name>
     <vendor>TECH OTAKUS</vendor>
+    <icon>pluginIcon.png</icon>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.redhat.devtools.lsp4ij</depends>

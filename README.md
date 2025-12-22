@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Icon](./src/main/resources/META-INF/pluginIcon@2x.png)
+![Icon](./src/main/resources/META-INF/pluginIcon.svg)
 
 </div>
 

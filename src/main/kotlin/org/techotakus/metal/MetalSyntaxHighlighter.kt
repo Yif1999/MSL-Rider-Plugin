@@ -1,4 +1,4 @@
-package org.techotakus.rider.metal
+package org.techotakus.metal
 
 import com.intellij.lexer.Lexer
 import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
@@ -26,7 +26,7 @@ class MetalSyntaxHighlighter : SyntaxHighlighterBase() {
         private val STRING_KEYS = arrayOf(DefaultLanguageHighlighterColors.STRING)
         private val COMMENT_KEYS = arrayOf(DefaultLanguageHighlighterColors.LINE_COMMENT)
 
-        // 自定义一个 Metal 标识符颜色 key，默认参考局部变量颜色，比纯白更醒目
+        // 自定义一�?Metal 标识符颜�?key，默认参考局部变量颜色，比纯白更醒目
         val METAL_IDENTIFIER: TextAttributesKey =
             TextAttributesKey.createTextAttributesKey(
                 "METAL_IDENTIFIER",

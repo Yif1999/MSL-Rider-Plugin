@@ -2,6 +2,22 @@
 
 # Metal Shader Language Support Changelog
 
+## [1.2.0] - 2025-12-22
+
+### Changed
+
+- **重要：插件 ID 从 `org.techotakus.rider.metal` 更改为 `org.techotakus.metal`**
+  - 符合 JetBrains 插件命名规范，避免使用产品名称 "Rider"
+  - 包名从 `org.techotakus.rider.metal` 更改为 `org.techotakus.metal`
+- 从 LSP4IJ 第三方库迁移到 JetBrains 官方 LSP API
+- 移除 `com.redhat.devtools.lsp4ij` 依赖
+- 使用 `platform.lsp.serverSupportProvider` 官方扩展点
+- 插件图标改为 SVG 格式以获得更好的显示效果
+
+### Fixed
+
+- 修复插件图标不显示的问题（PNG → SVG）
+
 ## [1.1.0] - 2025-12-17
 
 ### Added

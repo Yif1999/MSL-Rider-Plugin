@@ -1,31 +1,27 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>org.techotakus.rider.metal</id>
+    <id>org.techotakus.metal</id>
     <name>Metal Shader Language Support</name>
     <vendor>TECH OTAKUS</vendor>
-    <icon>pluginIcon.png</icon>
+    <icon>pluginIcon.svg</icon>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.redhat.devtools.lsp4ij</depends>
+    <depends>com.intellij.modules.ultimate</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- language 属性使用小写 ID "metal"，与 MetalLanguage 一致 -->
         <fileType name="Metal"
-                  implementationClass="org.techotakus.rider.metal.MetalFileType"
+                  implementationClass="org.techotakus.metal.MetalFileType"
                   fieldName="INSTANCE"
                   language="metal"
                   extensions="metal"/>
         <lang.syntaxHighlighterFactory language="metal"
-                                       implementationClass="org.techotakus.rider.metal.MetalSyntaxHighlighterFactory"/>
+                                       implementationClass="org.techotakus.metal.MetalSyntaxHighlighterFactory"/>
         <lang.parserDefinition language="metal"
-                               implementationClass="org.techotakus.rider.metal.MetalParserDefinition"/>
-    </extensions>
-
-    <extensions defaultExtensionNs="com.redhat.devtools.lsp4ij">
-        <server id="metal-lsp"
-                name="Metal LSP"
-                factoryClass="org.techotakus.rider.metal.lsp.MetalLanguageServerFactory"/>
-        <!-- LSP 语言映射同样使用 "metal" -->
-        <languageMapping language="metal" serverId="metal-lsp"/>
+                               implementationClass="org.techotakus.metal.MetalParserDefinition"/>
+        
+        <!-- JetBrains Official LSP API -->
+        <platform.lsp.serverSupportProvider
+                implementation="org.techotakus.metal.lsp.MetalLspServerSupportProvider"/>
     </extensions>
 </idea-plugin>

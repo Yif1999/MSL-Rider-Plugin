@@ -1,4 +1,4 @@
-package org.techotakus.rider.metal
+package org.techotakus.metal
 
 import com.intellij.openapi.util.IconLoader
 import javax.swing.Icon

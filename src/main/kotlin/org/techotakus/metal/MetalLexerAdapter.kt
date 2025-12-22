@@ -1,4 +1,4 @@
-package org.techotakus.rider.metal
+package org.techotakus.metal
 
 import com.intellij.lexer.LexerBase
 import com.intellij.psi.tree.IElementType

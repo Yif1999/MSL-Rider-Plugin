@@ -47,8 +47,6 @@ dependencies {
         // Module Dependencies. Uses `platformBundledModules` property from the gradle.properties file for bundled IntelliJ Platform modules.
         bundledModules(providers.gradleProperty("platformBundledModules").map { it.split(',') })
 
-        plugins("com.redhat.devtools.lsp4ij:${libs.versions.lsp4ij.get()}")
-
         testFramework(TestFrameworkType.Platform)
     }
 }

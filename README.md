@@ -1,8 +1,7 @@
 # Metal Shader Language Support
 
 <div align="center">
-
-![Icon](./src/main/resources/META-INF/pluginIcon.svg)
+<img src="./src/main/resources/META-INF/pluginIcon.svg" width="96" />
 
 </div>
 

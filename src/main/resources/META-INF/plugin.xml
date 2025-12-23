@@ -3,25 +3,30 @@
     <id>org.techotakus.metal</id>
     <name>Metal Shader Language Support</name>
     <vendor>TECH OTAKUS</vendor>
-    <icon>pluginIcon.svg</icon>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.modules.ultimate</depends>
+    <depends>com.redhat.devtools.lsp4ij</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- language 属性使用小写 ID "metal"，与 MetalLanguage 一致 -->
+        <!-- File Type Support -->
         <fileType name="Metal"
                   implementationClass="org.techotakus.metal.MetalFileType"
                   fieldName="INSTANCE"
                   language="metal"
                   extensions="metal"/>
+
+        <!-- Parser and Syntax Highlighting -->
         <lang.syntaxHighlighterFactory language="metal"
                                        implementationClass="org.techotakus.metal.MetalSyntaxHighlighterFactory"/>
         <lang.parserDefinition language="metal"
                                implementationClass="org.techotakus.metal.MetalParserDefinition"/>
-        
-        <!-- JetBrains Official LSP API -->
-        <platform.lsp.serverSupportProvider
-                implementation="org.techotakus.metal.lsp.MetalLspServerSupportProvider"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.redhat.devtools.lsp4ij">
+        <server id="metal-lsp"
+                name="Metal LSP"
+                factoryClass="org.techotakus.metal.lsp.MetalLanguageServerFactory"/>
+        <!-- LSP language mapping -->
+        <languageMapping language="metal" serverId="metal-lsp"/>
     </extensions>
 </idea-plugin>

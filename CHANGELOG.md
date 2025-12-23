@@ -4,6 +4,15 @@
 
 ## [Unreleased]
 
+## [1.2.1] - 2025-12-24
+
+### Changed
+
+- **回退到 LSP4IJ**：官方 LSP API 语义高亮集成存在缺陷，回退使用 LSP4IJ 第三方库
+- 恢复 LSP4IJ 相关配置和依赖
+- 移除官方 LSP API 相关代码
+- 调整支持平台版本回退到 2025.2.5
+
 ## [1.2.0] - 2025-12-22
 
 ### Changed
@@ -15,6 +24,8 @@
 - 移除 `com.redhat.devtools.lsp4ij` 依赖
 - 使用 `platform.lsp.serverSupportProvider` 官方扩展点
 - 插件图标改为 SVG 格式以获得更好的显示效果
+- **恢复大纲视图 (Structure View)**：通过 `LspStructureViewFactory` 恢复文件结构导航
+- **优化**：添加 `com.intellij.modules.lsp` 模块依赖以确保完整的 LSP 功能支持
 
 ### Fixed
 
